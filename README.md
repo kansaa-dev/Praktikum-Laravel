@@ -15,11 +15,11 @@ Teknologi yang digunakan :
 
 Sebelum menjalankan project, pastikan sudah menginstall:
 
--PHP
--Composer
--Node.js
--Git
--MySQL / XAMPP / Laragon
+- PHP
+- Composer
+- Node.js
+- Git
+- MySQL / XAMPP / Laragon
 
 ## Tentang Pengembangan
 
