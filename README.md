@@ -13,7 +13,7 @@ Teknologi yang digunakan :
 
 ## Persyaratan
 
-Sebelum menjalankan project, pastikan sudah menginstall:
+Sebelum menjalankan project, pastikan sudah menginstall :
 
 - PHP
 - Composer
@@ -23,4 +23,4 @@ Sebelum menjalankan project, pastikan sudah menginstall:
 
 ## Tentang Pengembangan
 
-Pengembangan praktikum ini akan terus diperbarui sesuai tugas dan pertemuan pada matakuliah
+Pengembangan praktikum ini akan terus diperbarui sesuai tugas dan pertemuan pada matakuliah.
