@@ -1,6 +1,6 @@
 ## Tentang Praktikum ini
 
-Praktikum ini membahas tentang penggunaan Laravel 12
+Praktikum ini kedepannya membahas tentang penggunaan teknologi pada Laravel
 
 Teknologi yang digunakan :
 - PHP
@@ -21,11 +21,11 @@ Sebelum menjalankan project, pastikan sudah menginstall :
 - Git
 - MySQL / XAMPP / Laragon
 
-## Pengembangan terbaru
+# Pengembangan terbaru
 
-# Sistem Informasi Manajemen Surat (Surat Masuk & Surat Keluar)
+# Sistem Informasi Manajemen Surat (Surat Masuk & Surat Keluar) (15/10/2026) Pertemuan Ke-3
 
-## 🛠️ Fitur & Fitur Utama Saat Ini
+## Fitur & Fitur Utama Saat Ini
 * **Dashboard Utama**: Halaman awal aplikasi.
 * **Modul Surat Masuk**: Menampilkan daftar surat masuk dan detail surat berdasarkan ID menggunakan simulasi *dummy data*.
 * **Modul Surat Keluar**: Menampilkan daftar surat keluar dan detail surat berbasis ID dengan parameter dinamis.
@@ -33,7 +33,7 @@ Sebelum menjalankan project, pastikan sudah menginstall :
 
 ---
 
-## 📂 Struktur Komponen dan Alur Kerja (MVC)
+## Struktur Komponen dan Alur Kerja (MVC)
 
 Proyek saat ini berfokus pada hubungan integrasi antara tiga komponen utama Laravel:
 
@@ -55,11 +55,11 @@ Menggunakan Blade Engine untuk memisahkan struktur utama halaman web dengan kont
 * **`layout/app.blade.php`**: Berperan sebagai kerangka induk global (*Master Layout*). Berisi struktur HTML standar, menu `<nav>` transisi antar-halaman, serta penanda `@yield('content')`.
 * **`surat-masuk/` & `surat-keluar/`**: Berisi file `index.blade.php` dan `show.blade.php` yang memperluas kerangka induk menggunakan perintah `@extends('layout.app')` dan menyisipkan konten tabel/detail di dalam blok `@section('content')`.
 
-## 💻 Cara Menjalankan Proyek Secara Lokal
+## Cara Menjalankan Proyek Secara Lokal
 
 1. **Clone repository ini:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/kansaa-dev/Praktikum-Laravel
    ```
 2. **Masuk ke direktori proyek:**
    ```bash
