@@ -35,7 +35,7 @@ Sebelum menjalankan project, pastikan sudah menginstall :
 
 ## Struktur Komponen dan Alur Kerja (MVC)
 
-Proyek saat ini berfokus pada hubungan integrasi antara tiga komponen utama Laravel:
+MVC adalah singkatan dari **Model-View-Controller**. Ini adalah sebuah pola arsitektur dalam pembuatan website yang bertugas untuk memisahkan kode program berdasarkan fungsi utamanya, sehingga kode menjadi lebih rapi, terstruktur, dan mudah dikembangkan.
 
 ### 1. Rute Aplikasi (`routes/web.php`)
 Mengatur lalu lintas URL dan memetakan setiap permintaan pengguna ke *Controller* yang sesuai menggunakan *Named Routes*.
