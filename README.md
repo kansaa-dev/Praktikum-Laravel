@@ -23,6 +23,69 @@ Sebelum menjalankan project, pastikan sudah menginstall :
 
 # Pengembangan terbaru
 
+# Sistem Informasi Manajemen Surat (Database,Seeder,Migration & Model) (22/10/2026) Pertemuan Ke-4
+
+## Perubahan Saat Ini
+* **Database MySQL: Membuat database `db_sim_surat` sebagai tempat penyimpanan data surat.**
+* **Model Surat Masuk: Model `IncomingLetter` yang merepresentasikan tabel surat masuk.**
+* **Model Surat Keluar: Model `OutgoingLetter` yang merepresentasikan tabel surat keluar.**
+* **Migration: Struktur tabel surat masuk dan surat keluar dibuat melalui `database/migrations`**.
+* **Seeder: Data awal (seeding) untuk surat masuk dan surat keluar menggantikan dummy data berbentuk array pada Controller.**
+
+### Database (`.env`)
+Membuat database mengggunakan Xampp/ Laragon dengan nama `db_sim_surat` Kemudian Konfigurasi koneksi database diatur pada file `.env` agar Laravel terhubung ke database `db_sim_surat`.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_sim_surat
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Model (`app/Models/`)
+
+Model adalah representasi tabel database dalam bentuk class PHP (*Eloquent ORM*), sehingga data bisa diakses tanpa menulis query SQL secara manual.
+
+- **`IncomingLetter.php`** : Model untuk data surat masuk (tabel `incoming_letters`).
+- **`OutgoingLetter.php`** : Model untuk data surat keluar (tabel `outgoing_letters`).
+
+Cara Membuat Model :
+
+   ```bash
+   php artisan make:model IncommingLetter -m
+   php artisan make:model OutgoingLetter -m
+   ```
+
+### Migration (`database/migrations/`)
+
+Berisi blueprint struktur tabel yang akan dibuat di database.
+
+- **`create_incoming_letters_table.php`** : Membuat tabel surat masuk.
+- **`create_outgoing_letters_table.php`** : Membuat tabel surat keluar.
+
+Membuat Migrations :
+
+   ```bash
+    php artisan migrate
+   ```
+
+### Seeder (`database/seeders/`)
+
+Seeder digunakan untuk mengisi tabel dengan data awal secara otomatis.
+
+- **`IncomingLetterSeeder.php`** : Mengisi data awal surat masuk.
+- **`OutgoingLetterSeeder.php`** : Mengisi data awal surat keluar.
+- **`DatabaseSeeder.php`** : Memanggil kedua seeder di atas sekaligus lewat satu perintah.
+
+Membuat Seeder:
+
+   ```bash
+   php artisan db:seed --class=IncomingLetterSeeder
+   php artisan db:seed --class=OutgoingLetterSeeder
+   ```
+
 # Sistem Informasi Manajemen Surat (Surat Masuk & Surat Keluar) (15/10/2026) Pertemuan Ke-3
 
 ## Fitur & Fitur Utama Saat Ini
@@ -63,7 +126,7 @@ Menggunakan Blade Engine untuk memisahkan struktur utama halaman web dengan kont
    ```
 2. **Masuk ke direktori proyek:**
    ```bash
-   cd praktikum-laravel
+   cd Praktikum-Laravel
    ```
 3. **Install dependensi composer:**
    ```bash
