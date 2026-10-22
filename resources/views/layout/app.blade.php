@@ -11,9 +11,11 @@
         <h2>Sistem Informasi Surat</h2>
         <hr>
         <nav>
-            <a href="{{ route('dashboard') }}">Dashboard</a>
-            <a href="{{ route('surat-masuk.index') }}">Surat Masuk</a>
-            <a href="{{ route('surat-keluar.index') }}">Surat Keluar</a>
+            <ul>
+               <li><a href="{{ route('dashboard') }}">Dashboard</a></li> 
+               <li><a href="{{ route('surat-masuk.index') }}">Surat Masuk</a></li>
+               <li><a href="{{ route('surat-keluar.index') }}">Surat Keluar</a></li>
+            </ul>
         </nav>
         <hr>
     </header>
