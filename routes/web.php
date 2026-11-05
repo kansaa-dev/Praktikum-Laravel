@@ -32,14 +32,16 @@ Route::get('/', function () {
 
 //php artisan make:controller SuratMasukController "SuratMasukController" <- Nama file
 
-//surat masuk
+
 
 // Route::get('/surat-masuk',      [SuratMasukController::class, 'index'])->name('surat-masuk.index');
 // Route::get('/surat-masuk/{id}', [SuratMasukController::class, 'show'])->name('surat-masuk.show');
 
-//surat keluar
-Route::get('/surat-keluar',      [SuratKeluarController::class, 'index'])->name('surat-keluar.index');
-Route::get('/surat-keluar/{id}', [SuratKeluarController::class, 'show'])->name('surat-keluar.show');
 
+//surat masuk
 Route::resource('surat-masuk', SuratMasukController::class)
     ->parameters(['surat-masuk' => 'id']);
+
+//surat keluar
+Route::resource('surat-keluar', SuratKeluarController::class)
+    ->parameters(['surat-keluar' => 'id']);
