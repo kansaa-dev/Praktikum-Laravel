@@ -23,7 +23,51 @@ Sebelum menjalankan project, pastikan sudah menginstall :
 
 # Pengembangan terbaru
 
-# Sistem Informasi Manajemen Surat (Database,Seeder,Migration & Model) (22/10/2026) Pertemuan Ke-4
+# Sistem Informasi Manajemen Surat (CRUD & Validasi Surat Masuk) (29/10/2026) Pertemuan Ke-4
+
+Pada pertemuan ke-4, dilakukan pengembangan fitur **CRUD (Create, Read, Update, Delete)** pada Sistem Informasi Manajemen Surat (SIM-Surat), khususnya pada fitur Surat Masuk.
+
+### Perubahan dan Penambahan
+
+1. **Resource Route**
+   - Mengubah route Surat Masuk menjadi `Route::resource`.
+   - Menambahkan tujuh endpoint untuk kebutuhan CRUD.
+
+2. **Model Eloquent**
+   - Menambahkan properti `$fillable` pada model `IncomingLetter`.
+   - Mengatur atribut yang dapat diisi melalui mass assignment.
+
+3. **Controller CRUD**
+   - Melengkapi `SuratMasukController` dengan method:
+     - `index()` – Menampilkan daftar surat.
+     - `create()` – Menampilkan form tambah surat.
+     - `store()` – Menyimpan data surat.
+     - `show()` – Menampilkan detail surat.
+     - `edit()` – Menampilkan form edit.
+     - `update()` – Memperbarui data surat.
+     - `destroy()` – Menghapus data surat.
+
+4. **View / Blade**
+   - Menambahkan `create.blade.php` sebagai form tambah surat.
+   - Menambahkan `edit.blade.php` sebagai form edit surat.
+   - Memperbarui `index.blade.php` dengan tombol tambah, detail, edit, dan hapus.
+   - Menyesuaikan `show.blade.php` untuk menampilkan detail data surat.
+
+5. **Validasi Data**
+   - Menambahkan validasi menggunakan `$request->validate()`.
+   - Menampilkan pesan kesalahan menggunakan `@error`.
+   - Mempertahankan input sebelumnya menggunakan `old()`.
+
+6. **Keamanan Form**
+   - Menggunakan `@csrf` untuk perlindungan CSRF.
+   - Menggunakan `@method('PUT')` untuk proses update.
+   - Menggunakan `@method('DELETE')` untuk proses penghapusan.
+
+7. **Notifikasi dan Pengujian**
+   - Menambahkan flash message untuk notifikasi berhasil.
+   - Menguji proses tambah, tampil, edit, hapus, dan validasi data.
+
+# Sistem Informasi Manajemen Surat (Database,Seeder,Migration & Model) (22/10/2026) Pertemuan Ke-3
 
 ## Perubahan Saat Ini
 * **Database MySQL: Membuat database `db_sim_surat` sebagai tempat penyimpanan data surat.**
@@ -86,7 +130,7 @@ Membuat Seeder:
    php artisan db:seed --class=OutgoingLetterSeeder
    ```
 
-# Sistem Informasi Manajemen Surat (Surat Masuk & Surat Keluar) (15/10/2026) Pertemuan Ke-3
+# Sistem Informasi Manajemen Surat (Surat Masuk & Surat Keluar) (15/10/2026) Pertemuan Ke-2
 
 ## Fitur & Fitur Utama Saat Ini
 * **Dashboard Utama**: Halaman awal aplikasi.
